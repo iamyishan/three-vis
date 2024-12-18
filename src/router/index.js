@@ -58,6 +58,14 @@ const routes = [
       {
         path: 'clipping',
         component: () => import('../views/materials/demos/clipping.vue')
+      },
+      {
+        path: 'layers',
+        component: () => import('../views/materials/demos/layers.vue')
+      },
+      {
+        path: 'instanced',
+        component: () => import('../views/materials/demos/instanced.vue')
       }
     ]
   },
@@ -65,6 +73,12 @@ const routes = [
     path: '/controls',
     name: 'controls',
     component: () => import('../views/controls/index.vue'),
+    children: [
+      {
+        path: 'camera',
+        component: () => import('../views/controls/demos/camera.vue')
+      }
+    ]
   },
   {
     path: '/glow',

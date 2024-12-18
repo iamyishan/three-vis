@@ -55,6 +55,18 @@ const demos = [
     description: '实现3D模型的材质裁剪效果',
     path: '/materials/clipping',
     preview: 'https://via.placeholder.com/300x200?text=Material+Clipping'
+  },
+  {
+    title: '图层材质',
+    description: '实现多层材质叠加效果',
+    path: '/materials/layers',
+    preview: 'https://via.placeholder.com/300x200?text=Layer+Material'
+  },
+  {
+    title: 'Instanced材质',
+    description: '使用实例化和继承实现高性能材质',
+    path: '/materials/instanced',
+    preview: 'https://via.placeholder.com/300x200?text=Instanced+Material'
   }
 ]
 
