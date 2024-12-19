@@ -34,7 +34,7 @@ const router = useRouter()
 const route = useRoute()
 
 const isDemo = computed(() => {
-  return route.path !== '/controls'
+  return route.path !== '/controls' && route.path !== '/controls/'
 })
 
 const demos = [
@@ -43,6 +43,24 @@ const demos = [
     description: '实现多种摄像头控制模式和动画效果',
     path: '/controls/camera',
     preview: 'https://via.placeholder.com/300x200?text=Camera+Controls'
+  },
+  {
+    title: '轨道控制器',
+    description: '展示OrbitControls的高级配置和使用技巧',
+    path: '/controls/orbit',
+    preview: 'https://via.placeholder.com/300x200?text=Orbit+Controls'
+  },
+  {
+    title: '变换控制器',
+    description: '实现对象的平移、旋转和缩放控制',
+    path: '/controls/transform',
+    preview: 'https://via.placeholder.com/300x200?text=Transform+Controls'
+  },
+  {
+    title: '地图控制器',
+    description: '实现类似地图的平移和缩放控制',
+    path: '/controls/map',
+    preview: 'https://via.placeholder.com/300x200?text=Map+Controls'
   }
 ]
 

@@ -77,6 +77,18 @@ const routes = [
       {
         path: 'camera',
         component: () => import('../views/controls/demos/camera.vue')
+      },
+      {
+        path: 'orbit',
+        component: () => import('../views/controls/demos/orbit.vue')
+      },
+      {
+        path: 'transform',
+        component: () => import('../views/controls/demos/transform.vue')
+      },
+      {
+        path: 'map',
+        component: () => import('../views/controls/demos/map.vue')
       }
     ]
   },
@@ -84,6 +96,32 @@ const routes = [
     path: '/glow',
     name: 'glow',
     component: () => import('../views/glow/index.vue'),
+    children: [
+      {
+        path: 'sprite',
+        component: () => import('../views/glow/demos/sprite.vue')
+      },
+      {
+        path: 'shader',
+        component: () => import('../views/glow/demos/shader.vue')
+      },
+      {
+        path: 'geometric',
+        component: () => import('../views/glow/demos/geometric.vue')
+      },
+      {
+        path: 'postprocessing',
+        component: () => import('../views/glow/demos/postprocessing.vue')
+      },
+      {
+        path: 'mask',
+        component: () => import('../views/glow/demos/mask.vue')
+      },
+      {
+        path: 'layers',
+        component: () => import('../views/glow/demos/layers.vue')
+      }
+    ]
   },
   {
     path: '/examples',

@@ -24,6 +24,8 @@ const goBack = () => {
     router.push('/materials')
   } else if (path.startsWith('/basic')) {
     router.push('/basic')
+  } else if (path.startsWith('/controls')) {
+    router.push('/controls')
   }
 }
 </script>
