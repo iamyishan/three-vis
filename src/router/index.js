@@ -7,39 +7,34 @@ const routes = [
     component: () => import('../views/basic/index.vue'),
     children: [
       {
-        path: 'basic',
-        component: () => import('../views/basic/demos/basic.vue')
+        path: 'base',
+        component: () => import('../views/basic/demos/base.vue')
       },
       {
         path: 'group',
         component: () => import('../views/basic/demos/group.vue')
-      }
+      },
+      {
+        path: 'visibility',
+        component: () => import('../views/basic/demos/visibility.vue')
+      },
+      {
+        path: 'events',
+        component: () => import('../views/basic/demos/events.vue')
+      },
+      {
+        path: 'shader',
+        component: () => import('../views/basic/demos/shader.vue')
+      },
+      {
+        path: 'penetrate',
+        component: () => import('../views/basic/demos/penetrate.vue')
+      },
+      {
+        path: 'scenes',
+        component: () => import('../views/basic/demos/scenes.vue')
+      },
     ]
-  },
-  {
-    path: '/basic/visibility',
-    name: 'visibility',
-    component: () => import('../views/basic/demos/visibility.vue')
-  },
-  {
-    path: '/basic/events',
-    name: 'events',
-    component: () => import('../views/basic/demos/events.vue')
-  },
-  {
-    path: '/basic/shader',
-    name: 'shader',
-    component: () => import('../views/basic/demos/shader.vue')
-  },
-  {
-    path: '/basic/penetrate',
-    name: 'penetrate',
-    component: () => import('../views/basic/demos/penetrate.vue')
-  },
-  {
-    path: '/basic/scenes',
-    name: 'scenes',
-    component: () => import('../views/basic/demos/scenes.vue')
   },
   {
     path: '/materials',

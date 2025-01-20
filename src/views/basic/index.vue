@@ -1,6 +1,11 @@
 <template>
   <div class="basic-container">
-    <div class="cards-grid">
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+    <div class="cards-grid" v-if="!isDemo">
       <el-card 
         v-for="demo in demos" 
         :key="demo.path"
@@ -22,53 +27,57 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+import { useRouter,useRoute } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
+const isDemo = computed(() => {
+  return route.path !== '/basic'
+})
 
 const demos = [
     {
     title: '基础场景',
     description: 'Three.js基础场景搭建',
-    path: '/basic/basic',
-    preview: 'https://via.placeholder.com/300x200?text=Basic+Demo'
+    path: '/basic/base',
+    preview: '/images/basic/base.jpg'
   },
   {
     title: '组合Group',
     description: '学习Three.js中的Group对象使用',
     path: '/basic/group',
-    preview: 'https://via.placeholder.com/300x200?text=Group+Demo'
+    preview: '/images/basic/group.jpg'
   },
   {
     title: '显隐v-if',
     description: '控制3D对象的显示和隐藏',
     path: '/basic/visibility',
-    preview: 'https://via.placeholder.com/300x200?text=Visibility+Demo'
+    preview: '/images/basic/visibility.jpg'
   },
   {
     title: '事件处理',
     description: '3D场景中的事件交互',
     path: '/basic/events',
-    preview: 'https://via.placeholder.com/300x200?text=Events+Demo'
+    preview:  '/images/basic/events.jpg'
   },
   {
     title: '着色器实践',
     description: 'GLSL着色器的基础应用',
     path: '/basic/shader',
-    preview: 'https://via.placeholder.com/300x200?text=Shader+Demo'
+    preview:  '/images/basic/shader.jpg'
   },
   {
     title: '穿透事件',
     description: '处理3D对象的点击穿透',
     path: '/basic/penetrate',
-    preview: 'https://via.placeholder.com/300x200?text=Penetrate+Demo'
+    preview:  '/images/basic/penetrate.jpg'
   },
   {
     title: '多场景',
     description: '在一个页面中展示多个3D场景',
     path: '/basic/scenes',
-    preview: 'https://via.placeholder.com/300x200?text=Scenes+Demo'
+    preview:  '/images/basic/scenes.jpg'
   }
 ]
 
