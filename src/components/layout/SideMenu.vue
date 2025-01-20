@@ -21,11 +21,13 @@
         <el-menu-item index="/controls">控制器</el-menu-item>
         <el-menu-item index="/glow">闪耀发光</el-menu-item>
       </el-sub-menu>
-
-      <el-menu-item index="/examples">
-        <el-icon><Collection /></el-icon>
-        <span>样例中心</span>
-      </el-menu-item>
+      <el-sub-menu index="/examples">
+        <template #title>
+         <el-icon><Collection /></el-icon>
+          <span>样例中心</span>
+        </template>
+        <el-menu-item index="/digital-city">数字城市</el-menu-item>
+      </el-sub-menu>
     </el-menu>
   </div>
 </template>

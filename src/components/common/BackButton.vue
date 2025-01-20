@@ -26,6 +26,8 @@ const goBack = () => {
     router.push('/basic')
   } else if (path.startsWith('/controls')) {
     router.push('/controls')
+  } else if (path.startsWith('/glow')) {
+    router.push('/glow')
   }
 }
 </script>

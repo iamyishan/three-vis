@@ -40,7 +40,7 @@ const isDemo = computed(() => {
 const demos = [
   {
     title: '点精灵贴图',
-    description: '使用精灵贴图实��发光粒子效果',
+    description: '使用精灵贴图实现发光粒子效果',
     path: '/glow/sprite',
     preview: 'https://via.placeholder.com/300x200?text=Sprite+Glow'
   },

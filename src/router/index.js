@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter,createWebHashHistory  } from 'vue-router'
 
 const routes = [
   {
@@ -9,13 +9,12 @@ const routes = [
       {
         path: 'basic',
         component: () => import('../views/basic/demos/basic.vue')
+      },
+      {
+        path: 'group',
+        component: () => import('../views/basic/demos/group.vue')
       }
     ]
-  },
-  {
-    path: '/basic/group',
-    name: 'group',
-    component: () => import('../views/basic/demos/group.vue')
   },
   {
     path: '/basic/visibility',
@@ -126,7 +125,19 @@ const routes = [
   {
     path: '/examples',
     name: 'examples',
-    component: () => import('../views/examples/index.vue')
+    component: () => import('../views/examples/index.vue'),
+    children: [
+      {
+        path: 'digital-city',
+        component: () => import('../views/examples/digitalCity.vue'),
+        children: [
+          {
+            path: 'building',
+            component: () => import('../views/examples/demos/building.vue')
+          }
+        ]
+      }
+    ]
   },
   {
     path: '/',
@@ -135,7 +146,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+ 
+  history: createWebHashHistory(),
   routes
 })
 

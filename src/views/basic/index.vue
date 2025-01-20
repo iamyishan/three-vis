@@ -73,6 +73,7 @@ const demos = [
 ]
 
 const navigateToDemo = (demo) => {
+  console.log(demo.path)
   router.push(demo.path)
 }
 </script>

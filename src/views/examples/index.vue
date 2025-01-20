@@ -5,6 +5,14 @@
 </template>
 
 <script setup>
+const demos = [
+  {
+    title: '数字城市',
+    description: '展示数字城市的建筑物和场景',
+    path: '/examples/digital-city',
+    preview: 'https://via.placeholder.com/300x200?text=Digital+City'
+  }
+]
 </script>
 
 <style lang="scss" scoped>
